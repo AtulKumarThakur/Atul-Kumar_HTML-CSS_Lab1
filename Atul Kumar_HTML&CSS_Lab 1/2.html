@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center the content vertically and horizontally */
+        html, body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Style for the container */
+        .container {
+            text-align: center;
+        }
+
+        /* Style for the bar graph */
+        .bar-graph {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        /* Style for individual bars */
+        .bar-container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .bar {
+            width: 20px; /* Width of the bars */
+            background-color: #3498db;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            animation: appear 1s ease-in-out forwards, moveUp 2s ease-in-out;
+        }
+
+        /* Style for vertical lines */
+        .vertical-line {
+            width: 2px;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            transform: translateY(-100%);
+        }
+
+        /* Set individual heights based on percentages */
+        .bar-30 {
+            height: 0;
+            animation-delay: 0.5s;
+        }
+
+        .bar-40 {
+            height: 0;
+            animation-delay: 1.5s;
+        }
+
+        .bar-80 {
+            height: 0;
+            animation-delay: 2.5s;
+        }
+
+        /* Set individual widths based on percentages */
+        .bar-30 .bar {
+            width: 30px;
+        }
+
+        .bar-40 .bar {
+            width: 40px;
+        }
+
+        .bar-80 .bar {
+            width: 80px;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveUp {
+            0% {
+                height: 0;
+            }
+            100% {
+                height: inherit;
+            }
+        }
+
+        /* Style for the title */
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Style for percentage numbers */
+        .percentage {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bar-graph">
+            <div class="bar-container bar-30">
+                <div class="vertical-line" style="height: 30%;"></div>
+                <div class="bar">30%</div>
+            </div>
+            <div class="bar-container bar-40">
+                <div class="vertical-line" style="height: 40%;"></div>
+                <div class="bar">40%</div>
+            </div>
+            <div class="bar-container bar-80">
+                <div class="vertical-line" style="height: 80%;"></div>
+                <div class="bar">80%</div>
+            </div>
+        </div>
+        <h1>Bar Plot</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://wallpaperaccess.com/full/303435.jpg');
+            background-size: cover;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 128, 0.35);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            background-color: rgba(70, 130, 180, 0.35);
+        }
+
+        input[type="submit"] {
+            background-image: url('https://i.pinimg.com/564x/10/66/e4/1066e44726d6fb75ab2e7ab189218c13.jpg');
+            background-size: cover;
+            width: 150px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-image: url('https://toppng.com/uploads/preview/reset-button-bts-pixel-speech-bubble-11563196048qvkikphtit.png');
+            background-size: cover;
+            width: 150px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form method="post" action="4.html">
+            <h1>Create a Gmail Account</h1>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="submit" value="submit">
+            <input type="reset" value="">
+        </form>
+    </div>
+</body>
+</html>
